@@ -15,7 +15,7 @@ public class BaseResponse<T> {
     @JsonProperty("isSuccess")
     private final Boolean isSuccess;
     private final String message;
-    //@JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private T result;
     public static <T> BaseResponse<T> onSuccess(T result){
         return new BaseResponse<>(1000, true,"요청에 성공하였습니다.", result);
