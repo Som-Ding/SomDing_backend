@@ -1,4 +1,4 @@
-package com.example.somding_backend.dto.review;
+package com.example.somding_backend.dto.request;
 
 import java.time.LocalDate;
 import lombok.Getter;
