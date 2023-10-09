@@ -3,8 +3,11 @@ package com.example.somding_backend.controller.project;
 import com.example.somding_backend.dto.request.project.ProjectReq;
 import com.example.somding_backend.dto.response.project.ProjectRes;
 import com.example.somding_backend.exception.base.BaseResponse;
+import com.example.somding_backend.repository.project.ProjectRepository;
+import com.example.somding_backend.service.project.ProjectService;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -19,22 +22,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/projects")
 public class ProjectController {
 
+    @Autowired
+    private ProjectService projectService;
 
     //프로젝트 생성
     @PostMapping("")
     public BaseResponse<ProjectRes> addProject(@RequestBody ProjectReq req){
-        ProjectRes res = new ProjectRes();
-
-        res.setProjectId(1L);
-        res.setTitle(req.getTitle());
-        res.setIntroduce(req.getIntroduce());
-        res.setPrice(req.getPrice());
-        res.setPolicy(req.getPolicy());
-        res.setCategory(req.getCategory());
-        res.setSchedule(req.getSchedule());
-        res.setTargetDate(req.getTargetDate());
-        res.setTargetPrice(req.getTargetPrice());
-
+        ProjectRes res = projectService.addProject(req);
         return BaseResponse.onSuccess(res);
     }
 
@@ -42,19 +36,19 @@ public class ProjectController {
     @ResponseBody
     @GetMapping("{projectId}")
     public BaseResponse<ProjectRes> getProject(@PathVariable("projectId")Long projectId){
-        ProjectRes res = new ProjectRes();
-        res.setProjectId(projectId);
+        ProjectRes res = projectService.getProjectById(projectId);
         return BaseResponse.onSuccess(res);
     }
 
 
     //조회부분 다시 필요
     //프로젝트 조회, 권한 설정
+    //내 프로젝트 조회
     @ResponseBody
-    @GetMapping("")
-    public BaseResponse<List<ProjectRes>> getProject(){
+    @GetMapping("{userId}")
+    public BaseResponse<List<ProjectRes>> getAllProject(@PathVariable("userId")Long userId){
         List<ProjectRes> res = new ArrayList<>();
-        //for문으로 넣어주기
+        res = projectService.getAllByUserId(userId);
 
         return BaseResponse.onSuccess(res);
     }
@@ -73,17 +67,17 @@ public class ProjectController {
 
 
     //수정 & 권한 설정 해줘야함
-    @PatchMapping("/{projectId}")
-    public BaseResponse<ProjectRes> changeProject(@PathVariable("projectId")Long projectId){
-        ProjectRes res = new ProjectRes();
-
-        return BaseResponse.onSuccess(res);
-    }
+//    @PatchMapping("/{projectId}")
+//    public BaseResponse<ProjectRes> changeProject(@PathVariable("projectId")Long projectId){
+//        ProjectRes res = new ProjectRes();
+//
+//        return BaseResponse.onSuccess(res);
+//    }
 
     //삭제,
     @DeleteMapping("{projectId}")
     public BaseResponse<ProjectRes> removeProject(@PathVariable("projectId")Long projectId){
-        ProjectRes res = new ProjectRes();
+        projectService.removeProject(projectId);
         //서비스에서 후원자가 없을 시 삭제 진행
         return BaseResponse.onSuccess(null);
     }
