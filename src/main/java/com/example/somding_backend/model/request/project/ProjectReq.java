@@ -1,5 +1,6 @@
 package com.example.somding_backend.model.request.project;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import lombok.Data;
 
@@ -9,7 +10,7 @@ public class ProjectReq {
     private String introduce;
     private String policy;
     private String schedule;
-    private LocalDateTime targetDate;
+    private LocalDate targetDate;
     private String category;
     private int targetPrice;
     private int price;
