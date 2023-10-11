@@ -5,9 +5,9 @@
 ## 요구사항 정의서 
 https://docs.google.com/spreadsheets/d/1GEjpQRtPM3ekEA--FnAgqRUez5LvtK5_PCPBcauyW54/edit#gid=0
 ## 파트 분배
-회원가입 - 학교 이메일  → 정다연 
+- 회원가입 - 학교 이메일  → 정다연 
 
-로그인 / 로그아웃 → 정다연 
+- 로그인 / 로그아웃 → 정다연 
 
 - 메인 페이지 → 정다연
     
