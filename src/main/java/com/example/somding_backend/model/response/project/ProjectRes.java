@@ -1,12 +1,10 @@
-package com.example.somding_backend.dto.response.project;
+package com.example.somding_backend.model.response.project;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+import lombok.Data;
+
+@Data
 public class ProjectRes {
     private Long projectId;
     private String title;
@@ -17,6 +15,6 @@ public class ProjectRes {
     private String category;
     private int targetPrice;
     private int price;
-
     private int userId;
 }
+

@@ -1,8 +1,8 @@
 package com.example.somding_backend.controller.review;
 
-import com.example.somding_backend.dto.request.ReviewReq;
-import com.example.somding_backend.dto.response.ReviewRes;
 import com.example.somding_backend.exception.base.BaseResponse;
+import com.example.somding_backend.model.request.review.ReviewReq;
+import com.example.somding_backend.model.response.review.ReviewRes;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

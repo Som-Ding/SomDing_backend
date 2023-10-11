@@ -1,8 +1,8 @@
 package com.example.somding_backend.controller.qna;
 
-import com.example.somding_backend.dto.request.qna.QnaReq;
-import com.example.somding_backend.dto.response.qna.QnaRes;
+
 import com.example.somding_backend.exception.base.BaseResponse;
+import com.example.somding_backend.model.response.qna.QnaRes;
 import com.fasterxml.jackson.databind.ser.Serializers.Base;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

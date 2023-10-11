@@ -1,10 +1,8 @@
-package com.example.somding_backend.dto.response.qna;
+package com.example.somding_backend.model.response.qna;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Setter
-@Getter
+@Data
 public class QnaRes {
     private Long questionId;
     private Long userId;
@@ -15,3 +13,4 @@ public class QnaRes {
     private String answer;
     private boolean isPrivate;
 }
+

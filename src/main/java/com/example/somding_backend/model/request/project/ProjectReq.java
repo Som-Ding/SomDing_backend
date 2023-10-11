@@ -1,12 +1,9 @@
-package com.example.somding_backend.dto.request.project;
+package com.example.somding_backend.model.request.project;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class ProjectReq {
     private String title;
     private String introduce;
@@ -16,6 +13,5 @@ public class ProjectReq {
     private String category;
     private int targetPrice;
     private int price;
-
     private String photo;
 }

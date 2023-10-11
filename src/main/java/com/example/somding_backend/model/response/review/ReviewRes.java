@@ -1,4 +1,4 @@
-package com.example.somding_backend.dto.request;
+package com.example.somding_backend.model.response.review;
 
 import java.time.LocalDate;
 import lombok.Getter;
@@ -6,13 +6,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ReviewReq {
+public class ReviewRes {
     private Long reviewId;
     private Long orderId;
     private String title;
     private String content;
     private float rate;
-
     private LocalDate createdAt;
     private LocalDate updatedAt;
 

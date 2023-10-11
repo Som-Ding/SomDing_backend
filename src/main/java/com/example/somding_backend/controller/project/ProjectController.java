@@ -1,10 +1,11 @@
 package com.example.somding_backend.controller.project;
 
-import com.example.somding_backend.dto.request.project.ProjectReq;
-import com.example.somding_backend.dto.response.project.ProjectRes;
 import com.example.somding_backend.exception.base.BaseResponse;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.somding_backend.model.request.project.ProjectReq;
+import com.example.somding_backend.model.response.project.ProjectRes;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;

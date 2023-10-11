@@ -1,4 +1,4 @@
-package com.example.somding_backend.dto.response.user;
+package com.example.somding_backend.model.response.auth;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Schema(description = "로그인 관련 Response")
-public class LoginResponse {
+public class LoginRes {
     @Schema(description = "accessToken")
     private String accessToken;
     @Schema(description = "refreshToken")
