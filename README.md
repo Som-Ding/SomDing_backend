@@ -31,7 +31,7 @@ https://docs.google.com/spreadsheets/d/1GEjpQRtPM3ekEA--FnAgqRUez5LvtK5_PCPBcauy
     
     삭제는 한 사람이라도 후원한 사람이 존재하면 삭제 불가능하게끔 
     
-- 마이 페이지  → 신이현
+- 마이 페이지  → 정다연
     
     내 프로젝트
     
