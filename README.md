@@ -4,6 +4,8 @@
 [SOMDING](https://www.erdcloud.com/d/Euu8ey24tXCXJ42Sg)
 ## 요구사항 정의서 
 https://docs.google.com/spreadsheets/d/1GEjpQRtPM3ekEA--FnAgqRUez5LvtK5_PCPBcauyW54/edit#gid=0
+## 기술 스텍
+Spring Boot 
 ## 파트 분배
 - 회원가입 - 학교 이메일  → 정다연 
 
